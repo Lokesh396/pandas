@@ -1,0 +1,194 @@
+to load data
+
+first import pandas as pd
+
+to read
+
+df=pd.read_csv('filename')
+
+df
+
+to see no of rows and columns present in the data
+
+df.shape
+ it returns no of rows and coloumns present in the data
+
+df.info()
+ it returns the type of data present in the document
+
+pd.set_option('display.max_rows',how many)
+pd.set_option('display.max_columns',how many)
+
+to print top 5
+
+df.head(5)
+
+to print tail 5
+
+df.tail(5)
+
+thats the end of the first video
+
+
+In video 2 we started what is  a dataframe
+
+DataFrame is just like a Dictionary with key and values in the list..
+
+We created a simple data in python dictinoary and converted in to pandas DataFrame
+
+import pandas as pd
+df=pd.DataFrame(data)
+
+it will converts the data into the dataframe
+
+we ca use indexes from loc and iloc functions
+
+iloc is integerlocations
+
+df.iloc[0]
+prints all values present in row 0
+
+we can send multiple rows in a lsit
+
+df.iloc[[0,1,2]]
+
+we can send one more argument that is column name as
+
+df.loc[[0,2],'mail']
+
+for iloc
+
+df.iloc[[0,1],1]
+
+we can also use slice opeartor in loc
+
+df.loc[:,name':'country']
+
+we can also see all the columns present in the data as
+
+df.columns
+
+
+value_counts() method is used the quantities in the dataframe 
+
+thats the end of the second video
+
+Video 3
+
+In video 3 we see how to make a column as index 
+
+we can make it in two ways
+
+we can make it directly while reading the file as index_col=''
+
+enter the column which you want to make as index column
+
+Another way was using set_index method to make the changes permanent use inplace='True'
+
+to sort the index column in alphabetical order
+
+we just use sort_index() method by placing ascending=False we can sort this in reverse order
+
+
+video 4
+
+In video 4 we learn about how to use filter in pandas
+
+filter is useful to get the specific data you need
+
+filt=df['country'] == 'India'
+df[filt]
+
+it prints all the respondents whose country was india
+
+u can also use boolean operators & | for filters
+
+it is suggested to use df.loc[filt] to get the desired data 
+
+we learned about isin method
+
+which is used for a filter to get the specific data of the given commodities of the list
+
+str.contains is a method used to search about a part of a string is present in the given string or not
+
+video 4
+
+in video 4 we learn how to update rows and coloumns
+
+we can change.case of the columns using 
+
+df.columns=[x.upper() for x in df.coloumns]
+
+similarly x.lower() is used to change it to lower case always lower case wil be prefarable
+
+we can rename a column using renmae method
+
+df.rename(coloumns={'':'','':''})
+
+
+we can replace a cahracther in the string using 
+
+df.columns=df.coloumns.str.replace(' ','_')
+
+we can change a single or multiple words using loc
+
+df.loc[0]=['mail','first','last']
+
+to change  a particular cell
+
+df.loc[0,'mail']='email'
+
+to change 2 cell in a row
+
+df.loc[0,['mail','last']]=['','']
+
+we can also 'at' in the place of loc to change a single value
+
+now we are going to learn about 
+
+apply it will be applied to a series
+map
+applymap it will be applied to entire elements of the data frame
+replace
+
+
+
+
+in the 6 video we learn about how to remove columns and add new columns and remove rows
+
+drop method was used to drop 
+
+df.drop(columns='mail',inplace=True)
+
+to add a new columns
+
+df['fullname']=df['first'] +' ' df['last']
+
+str.split method is used to split the string at a certain place
+
+str.split(' ',expand=True)
+
+it makes the splitted strind to a neat readable manner to add it as a column
+
+
+df.drop(index=df[filt].index)
+
+it will be useful to drop a row
+
+df.append({'first':'tony',ignore_indx=True}
+
+we can also the value as in this format as dictionary
+df.append(df2,ignore_index=True)
+
+to add rows we must use append methos
+
+video 7
+
+we learn about how to use nlargest and nsmallest methods
+
+sort_values() method is useful for sorting the data present in the dataset
+
+inplace should be used to make it permanent
+
+
+
